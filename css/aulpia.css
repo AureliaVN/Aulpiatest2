@@ -454,6 +454,11 @@ p:last-child{margin-bottom:0}
 .hero-light--passerelle .hero-light__bg{right:-30%}
 @media (max-width:760px){.hero-light--passerelle .hero-light__bg{right:0;background-position:42% 40%!important}}
 
+/* Hero clair : photo calée à droite, fondue vers la crème à gauche */
+.hero-light--droite .hero-light__bg{left:38%;right:0;background-position:22% 40%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%)}
+.hero-light--droite .hero-light__shade{background:linear-gradient(90deg,rgba(249,248,245,.92) 0%,rgba(249,248,245,.78) 30%,rgba(249,248,245,0) 52%)}
+@media (max-width:760px){.hero-light--droite .hero-light__bg{left:0;-webkit-mask-image:none;mask-image:none;background-position:38% 40%!important}.hero-light--droite .hero-light__shade{background:rgba(249,248,245,.8)}}
+
 
 /* Accueil — fonds de section chauds */
 .section--terracotta{background:var(--terracotta)}
@@ -483,3 +488,18 @@ p:last-child{margin-bottom:0}
 .checklist{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
 .checklist li{position:relative;padding-left:30px;font-size:var(--fs-body);font-weight:700}
 .checklist li::before{content:'';position:absolute;left:0;top:.2em;width:18px;height:18px;border-radius:50%;background:var(--miel)}
+/* La gourde — hero : photo de la gourde sur son banc (cadrage d'origine), texte à gauche */
+.hero-home--banc{min-height:62.5vw}
+.hero-home--banc .hero-home__bg{top:0;height:100%;background-size:112% auto;background-position:0% 100%;background-repeat:no-repeat}
+.hero-home--banc .hero-home__inner{max-width:none;padding-left:4vw}
+.hero-home--banc .hero-home__text{max-width:420px}
+.hero-home--banc .hero-home__shade{background:linear-gradient(90deg,rgba(24,28,4,0.62) 0%,rgba(24,28,4,0.45) 30%,rgba(24,28,4,0) 46%)}
+@media (max-width:1100px){.hero-home--banc{min-height:0}.hero-home--banc .hero-home__bg{background-size:cover;background-position:center bottom}.hero-home--banc .hero-home__inner{padding-left:var(--gutter)}.hero-home--banc .hero-home__text{max-width:560px}.hero-home--banc .hero-home__shade{background:rgba(24,28,4,0.55)}}
+
+/* Accueil — hero : la chienne en entier, texte à gauche */
+.hero-home--chienne{min-height:62.5vw}
+.hero-home--chienne .hero-home__bg{top:0;height:100%;background-size:110% auto;background-position:0% 60%;background-repeat:no-repeat}
+.hero-home--chienne .hero-home__inner{max-width:none;padding-left:4vw}
+.hero-home--chienne .hero-home__text{max-width:440px}
+.hero-home--chienne .hero-home__shade{background:linear-gradient(90deg,rgba(24,28,4,0.6) 0%,rgba(24,28,4,0.42) 32%,rgba(24,28,4,0) 48%)}
+@media (max-width:1100px){.hero-home--chienne{min-height:0}.hero-home--chienne .hero-home__bg{background-size:cover;background-position:46% center}.hero-home--chienne .hero-home__inner{padding-left:var(--gutter)}.hero-home--chienne .hero-home__text{max-width:560px}.hero-home--chienne .hero-home__shade{background:rgba(24,28,4,0.55)}}

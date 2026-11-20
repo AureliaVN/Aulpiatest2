@@ -27,8 +27,8 @@
 <!--@/header-->
 <main>
 
-  <section class="hero-home">
-    <div class="hero-home__bg" data-parallax style="background-image:url('images/accueil-hero.jpg')" aria-hidden="true"></div>
+  <section class="hero-home hero-home--left hero-home--chienne">
+    <div class="hero-home__bg" style="background-image:url('images/gourde-hero.jpg')" role="img" aria-label="Springer en randonnée dans la neige"></div>
     <div class="hero-home__shade"></div>
     <div class="hero-home__inner on-dark">
       <div class="hero-home__text">
@@ -71,9 +71,15 @@
     </div>
   </section>
 
-  <section class="section section--terracotta on-dark">
-    <div class="container split reveal">
-      <div>
+  <style>
+    .sci-fond{position:relative;overflow:hidden;isolation:isolate;padding-top:72px;padding-bottom:72px}
+    .sci-fond::before{content:"";position:absolute;top:0;bottom:0;left:0;right:34%;z-index:-1;background:url('images/accueil-science-fond.jpg') 15% 40%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,#000 62%,transparent 100%);mask-image:linear-gradient(90deg,#000 62%,transparent 100%)}
+    .sci-fond .sci-text{max-width:500px;margin-left:auto}
+    @media (max-width:860px){.sci-fond::before{right:0;-webkit-mask-image:none;mask-image:none;opacity:.3}.sci-fond .sci-text{margin-left:0}}
+  </style>
+  <section class="section section--olive on-dark sci-fond">
+    <div class="container reveal">
+      <div class="sci-text">
         <span class="eyebrow">La science de l'effort</span>
         <h2>Pourquoi une recharge pendant l'effort</h2>
         <p class="lead">Sur une sortie longue, ton chien puise dans une petite réserve de sucres, la première à baisser. Un apport au bon moment l'aide à la ménager, puis à démarrer la récupération. C'est le ravito que tu prends pour toi, enfin pensé pour lui.</p>
@@ -82,22 +88,26 @@
           <a class="btn" href="/la-science-de-leffort/">Comprendre le mécanisme →</a>
         </div>
       </div>
-      <div class="photo ratio-4-5" style="max-width:440px;width:100%;justify-self:center"><img src="images/accueil-sentier-chiens.jpg" alt="Deux chiens actifs courant sur un sentier de montagne, face à un sommet enneigé" style="object-position:center 70%" loading="lazy"></div>
     </div>
   </section>
 
-  <section class="section section--photo" style="background-image:linear-gradient(rgba(249,248,245,0.62),rgba(249,248,245,0.62)),url('images/accueil-producteurs-bg.jpg')">
-    <div class="container split reveal">
-      <div>
+  <style>
+    .compo{padding:56px 0}
+    .compo-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 28px}
+    .compo-row .ingredient{padding:14px 16px;gap:6px}
+    .compo-row .ingredient strong{font-size:15px}
+    .compo-row .ingredient span.ingredient__origin{margin-top:2px;font-size:11px}
+    .compo-row .ingredient__role{font-size:13px;line-height:1.4}
+    @media (max-width:960px){.compo-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:520px){.compo-row{grid-template-columns:1fr}}
+  </style>
+  <section class="section section--photo compo" style="background-image:linear-gradient(rgba(249,248,245,0.55),rgba(249,248,245,0.55)),url('images/accueil-composition-bg.jpg');background-position:center 45%">
+    <div class="container reveal">
+      <div class="section-head section-head--center" style="margin-bottom:28px">
         <span class="eyebrow">Composition</span>
         <h2>Quatre ingrédients, rien à cacher</h2>
-        <p>Chaque ingrédient a un rôle, et je peux te l'expliquer.</p>
-        <p>La recette est conçue en Haute-Savoie et fabriquée à Lyon.</p>
-        <div class="actions">
-          <a class="btn" href="/la-gourde/#composition">Voir la composition complète →</a>
-        </div>
       </div>
-      <div class="ingredients">
+      <div class="compo-row">
         <div class="card ingredient">
           <div><strong>Purée de pommes</strong><span class="ingredient__origin">Origine France</span></div>
           <p class="ingredient__role">La base de la recette : de l'eau et des sucres naturels, pour hydrater et recharger.</p>
@@ -114,6 +124,9 @@
           <div><strong>Sel de Guérande</strong><span class="ingredient__origin">Entreprise française</span></div>
           <p class="ingredient__role">Une pointe de sodium, qui accompagne l'absorption du glucose.</p>
         </div>
+      </div>
+      <div class="actions actions--center">
+        <a class="btn" href="/la-gourde/#composition">Voir la composition complète →</a>
       </div>
     </div>
   </section>
@@ -139,7 +152,7 @@
   <section class="section section--miel">
     <div class="container split reveal">
       <div class="photo ratio-3-4">
-        <img src="images/accueil-aurelia.jpg" alt="Aurélia avec ses chiens Foebee, Suerte et Inna dans les Alpes" style="object-position:center 20%" loading="lazy">
+        <img src="images/accueil-petit-bout.jpg" alt="Aurélia tient une gourde Aulpia devant les montagnes, dans un pré aux couleurs d'automne" style="object-position:52% center" loading="lazy">
       </div>
       <div>
         <span class="eyebrow">Aurélia – La fondatrice</span>
